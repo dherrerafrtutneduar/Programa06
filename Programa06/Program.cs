@@ -13,15 +13,17 @@ class Program
             Console.WriteLine("Cargando reglas del sistema...");
             Console.WriteLine("Restricción: Prohibida la venta a menores de " + EDAD_MINIMA + " años.");
             
-            // Intento de uso
-            int edadCliente = 20;
-            Console.WriteLine("\nVerificando cliente de " + edadCliente + " años...");
-            
-            if (edadCliente >= EDAD_MINIMA) {
-                Console.WriteLine("Acceso CONCEDIDO.");
-            } else {
-                Console.WriteLine("Acceso DENEGADO.");
-            }
+            // Intento de uso con constantes (sin estructuras de control)
+            const int EDAD_CLIENTE = 20;
+            const bool PUEDE_INGRESAR = EDAD_CLIENTE >= EDAD_MINIMA; // expresión booleana
+
+            Console.WriteLine("\nVerificando cliente de " + EDAD_CLIENTE + " años...");
+            Console.WriteLine("Edad mínima: " + EDAD_MINIMA);
+            Console.WriteLine("Acceso permitido (valor bool constante): " + PUEDE_INGRESAR);
+
+            // Mostrar constantes para reforzar concepto
+            Console.WriteLine("Constante NOMBRE_APP = " + NOMBRE_APP);
+            Console.WriteLine("Constante VERSION = " + VERSION);
 
             Console.ReadLine();
 
